@@ -1,23 +1,24 @@
 export async function getPokemonData(searchFilter) {
   const rawResponse = await fetch(`/.netlify/functions/pokemon?searchFilter=${searchFilter}`);
-  const data = await rawResponse.json();
+  const pokeData = await rawResponse.json();
   
-  return data.data.results;
+  console.log(pokeData, 2); //eslint-disable-line
+  return pokeData.data.results;
 }
   
   
 export async function getYelpData(searchFilter) {
   const rawResponse = await fetch(`/.netlify/functions/yelp?searchFilter=${searchFilter}`);
-  const data = await rawResponse.json();
+  const yelpData = await rawResponse.json();
   
-  return data.data.results;
+  return yelpData.data.blank;
 }
   
   
   
 export async function getWeatherData(searchFilter) {
   const rawResponse = await fetch(`/.netlify/functions/weather?searchFilter=${searchFilter}`);
-  const data = await rawResponse.json();
+  const weatherData = await rawResponse.json();
   
-  return data.data.results;
+  return weatherData.data.blank;
 }
