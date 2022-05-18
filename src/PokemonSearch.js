@@ -11,7 +11,7 @@ export default function PokemonSearch() {
         // set the loading state to true
         // use fetch to make a request to your netlify pokemon function. Be sure to pass the pokemon name as a query param in the URL
     const response = await getPokemonData(pogeymanQuery);
-    console.log(response, 2); //eslint-disable-line
+    //console.log(response, 2); //eslint-disable-line
     setPogeyman(response);
         // put the jsonified data in state and set the loading state to false
   }
