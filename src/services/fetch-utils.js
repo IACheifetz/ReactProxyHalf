@@ -1,4 +1,4 @@
-export async function getPokemon(searchFilter) {
+export async function getPokemonData(searchFilter) {
   const rawResponse = await fetch(`/.netlify/functions/pokemon?searchFilter=${searchFilter}`);
   const data = await rawResponse.json();
   
